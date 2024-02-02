@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mokepon</title>
+    <link rel="stylesheet" href="css/style.css">
+ 
+</head>
+<body>
+    <section id="select__mascota">
+        <h1 class="title">Mokepon</h1>
+        <h2 class="subtitulo">Elige tu mascota: </h2>
+
+        <div id="content__tarjetas" class="tarjetas">
+            <!-- <input type="radio" id="hipodoge" name="mascota">
+            <label for="hipodoge" class="tarjeta_mokepon">
+                <span>Hipodogue</span>
+                <img src="img/hipwebp.webp" alt="hip">
+            </label>
+            <input type="radio" id="capipepo" name="mascota">
+            <label for="capipepo" class="tarjeta_mokepon">
+                <span>Capipepo</span>
+                <img src="img/rat.png" alt="cap">
+            </label>
+            <input type="radio" id="ratigueya" name="mascota">
+            <label for="ratigueya" class="tarjeta_mokepon">
+                <span>Ratigueya</span>
+                <img src="img/rat.webp" alt="rat">
+            </label> -->
+            
+        </div>
+
+        <button id="btn-select">Seleccionar</button>
+    </section>
+
+    <!-- nuevo tag para camvas -->
+
+    <section id="ver__mapa">
+        <h2 class="titulo">Recorre el mapa con tu mokepon</h2>
+        <canvas id="mapa"></canvas>
+        <button  ontouchstar="moverTop()" ontouchend="detenerMovimiento()" onmouseup="detenerMovimiento()" onmousedown="moverTop()"><span><ion-icon name="arrow-up-outline"></ion-icon></span></button>
+        <div class="btnsss">
+        <button ontouchstar="moverLeft()" ontouchend="detenerMovimiento()" onmouseup="detenerMovimiento()" onmousedown="moverLeft()"><span><ion-icon name="arrow-back-outline"></ion-icon></span></button>
+        <button ontouchstar="moverBottom()" ontouchend="detenerMovimiento()" onmouseup="detenerMovimiento()" onmousedown="moverBottom()"><span><ion-icon name="arrow-down-outline"></ion-icon></span></button>
+        <button ontouchstar="moverRight()" ontouchend="detenerMovimiento()" onmouseup="detenerMovimiento()" onmousedown="moverRight()"><span><ion-icon name="arrow-forward-outline"></ion-icon></span></button>
+
+        </div>
+        <!-- <button onmouseup="detenerMovimiento()" onmousedown="moverRight()"><span><ion-icon name="arrow-forward-outline"></ion-icon></span></button>
+        <button onmouseup="detenerMovimiento()" onmousedown="moverBottom()"><span><ion-icon name="arrow-down-outline"></ion-icon></span></button>
+        <button onmouseup="detenerMovimiento()" onmousedown="moverLeft()"><span><ion-icon name="arrow-back-outline"></ion-icon></span></button> -->
+    </section>
+
+    <section id="select__ataque" class="ataque">
+        <h1 class="title">Mokepon</h1>
+        <h2 class="subtitulo">Elige tu ataque: </h2>
+
+        <div id="btns_ataques">
+            <!-- <button id="btn-fuego" class="btnsAtaques">Fuego 🔥</button>
+            <button id="btn-agua" class="btnsAtaques">Agua 💧</button>
+            <button id="btn-tierra" class="btnsAtaques">Tierra ☘️</button> -->
+        </div>
+
+        <div class="banner2">
+            <div id="mensajes">
+                <p id="resultado">Mucha Suerte</p>
+
+                <section id="reinicio">
+                    <button id="btn-reiniciar">Reiniciar</button>
+                </section>
+            </div>
+        </div>
+
+        <div class="ataque">
+            <div class="ataques-jugador">
+                <p id="vidas__jugador">0</p> 
+                <p id="mascota__jugador"></p>
+                <div id="ataque__Judador"></div>
+            </div>
+            <div class="ataques-enemigo">
+                <p id="vidas__enemigo">0</p>
+                <p id="mascota__enemigo"></p>
+                <div id="ataque__Enemigo"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="js/script.js"></script> 
+</body>
+</html>

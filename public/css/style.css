@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+* {
+  font-family: "Fredoka One", cursive;
+  background-color: #041562;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#select__mascota {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#select__mascota .tarjetas {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+#select__mascota .tarjetas .tarjeta_mokepon {
+  cursor: pointer;
+  width: 180px;
+  height: 120px;
+  background: #11468F;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  flex-direction: column;
+  overflow: hidden;
+}
+#select__mascota .tarjetas .tarjeta_mokepon span {
+  background: transparent;
+  margin-bottom: 5px;
+  transition: 0.5s;
+}
+#select__mascota .tarjetas .tarjeta_mokepon img {
+  width: 80px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.5);
+  transition: 0.5s;
+}
+#select__mascota .tarjetas .tarjeta_mokepon:hover span {
+  letter-spacing: 2px;
+}
+#select__mascota .tarjetas .tarjeta_mokepon:hover img {
+  transform: translateY(-5px);
+}
+#select__mascota .tarjetas input {
+  display: none;
+}
+#select__mascota .tarjetas input:checked + label {
+  background: #5D8BF4;
+}
+#select__mascota #btn-select {
+  position: relative;
+  width: 9em;
+  height: 3em;
+  border-radius: 30em;
+  font-size: 15px;
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.5), -6px -6px 12px rgba(255, 255, 255, 0.3);
+  display: block;
+  margin-top: 15px;
+  left: 90px;
+  color: #fff;
+  transition: 0.5s;
+}
+#select__mascota #btn-select::before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 3em;
+  border-radius: 30em;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, #0fd850 0%, #f9f047 100%);
+  transition: 0.5s ease;
+  display: block;
+  z-index: -1;
+}
+#select__mascota #btn-select:hover {
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: 0.5s;
+}
+#select__mascota #btn-select:hover::before {
+  width: 9em;
+}
+
+#select__ataque {
+  width: 100%;
+  min-height: 100vh;
+  z-index: 100;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+#select__ataque .btnsAtaques {
+  background: #11468f;
+  padding: 10px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  border-color: transparent;
+  cursor: pointer;
+  color: #fff;
+  width: 100px;
+}
+#select__ataque .banner2 #mensajes {
+  width: 280px;
+  background: #EEE;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#select__ataque .banner2 #mensajes #resultado {
+  background: transparent;
+}
+#select__ataque .banner2 #mensajes #reinicio {
+  background: transparent;
+  margin-top: 10px;
+}
+#select__ataque .banner2 #mensajes #reinicio #btn-reiniciar {
+  cursor: pointer;
+  border-color: transparent;
+  color: #11468f;
+  background: transparent;
+}
+#select__ataque .ataque {
+  display: grid;
+  background: aqua;
+  grid-template-columns: 100px 100px;
+}
+
+.title {
+  background: #99CC3D;
+  position: relative;
+  padding: 10px;
+  width: 300px;
+  border-radius: 15px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.subtitulo {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+.ataques-jugador, .ataques-enemigo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  flex-direction: column;
+  padding: 15px 10px;
+}
+
+#ver__mapa {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+#ver__mapa h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+#ver__mapa .btnsss {
+  display: flex;
+  gap: 5px;
+}
+#ver__mapa button {
+  width: 120px;
+  height: 40px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  background: #5D8BF4;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0px -5px 15px rgba(255, 255, 255, 0.3);
+}
+#ver__mapa button span {
+  background: transparent;
+  color: #fff;
+  padding: 5px;
+}
+#ver__mapa button span ion-icon {
+  background: transparent;
+  font-size: 2em;
+}
+
+@media (max-width: 600px) {
+  #select__mascota {
+    padding: 20px;
+  }
+  .tarjetas {
+    padding: 10px;
+    flex-direction: column;
+  }
+  #select__ataque .btnsAtaques {
+    margin: 8px 5px;
+  }
+}
+@media (max-width: 360px) {
+  .tarjetas {
+    padding: 10px;
+    flex-direction: column;
+  }
+  #select__ataque .btnsAtaques {
+    margin: 5px 5px;
+  }
+  #ver__mapa button {
+    width: 90px;
+  }
+}/*# sourceMappingURL=style.css.map */
